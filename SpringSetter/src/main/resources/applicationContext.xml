@@ -6,6 +6,6 @@
     <bean id="dbConnection" class="model.DBConnection">
         <property name="url" value="jdbc:mysql://localhost:3306/jpa"></property>
         <property name="username" value="root"></property>
-        <property name="password" value="root"></property>
+        <property name="password" value=""></property>
     </bean>
 </beans>
