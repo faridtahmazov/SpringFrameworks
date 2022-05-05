@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="dbConnectionName" class="DBConnection">
+        <constructor-arg name="url" value="jdbc:mysql://localhost:3306/jpa"></constructor-arg>
+        <constructor-arg name="username" value="root"></constructor-arg>
+        <constructor-arg name="password" value="root"></constructor-arg>
+    </bean>
+
+    <bean name="dbConnectionIndex" class="DBConnection">
+        <constructor-arg index="0" value="jdbc:mysql://localhost:3306/jpa"></constructor-arg>
+        <constructor-arg index="1" value="root"></constructor-arg>
+        <constructor-arg index="2" value="root"></constructor-arg>
+    </bean>
+
+    <bean name="dbConnectionCustom" class="DBConnection">
+        <constructor-arg name="username" value="root"></constructor-arg>
+        <constructor-arg name="password" value="root"></constructor-arg>
+    </bean>
+</beans>
