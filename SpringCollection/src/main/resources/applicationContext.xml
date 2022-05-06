@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="dbConnection" class="model.DBConnection">
+    <property name="username" value="tahmazovfarid"></property>
+    <property name="password" value="12345"></property>
+    <property name="list">
+        <list>
+            <value>min 5 connection</value>
+            <value>max 20 connection</value>
+            <value>100 statements cacheable</value>
+        </list>
+    </property>
+    <property name="map">
+        <map>
+            <entry key="min_connection" value="5"></entry>
+            <entry key="max_connection" value="20"></entry>
+            <entry key="max_cache_statement" value="100"></entry>
+        </map>
+    </property>
+    <property name="properties">
+        <props>
+            <prop key="username">root</prop>
+            <prop key="password">root</prop>
+            <prop key="url">jdbc:mysql://localhost:3306/database?createDatabaseIfNotExist=true</prop>
+        </props>
+    </property>
+</bean>
+</beans>
