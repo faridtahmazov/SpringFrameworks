@@ -1,9 +1,20 @@
 package model;
 
+import java.util.List;
+
 public class DBConnection {
     private String url;
     private String username;
     private String password;
+    private List<String> properties;
+
+    public List<String> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(List<String> properties) {
+        this.properties = properties;
+    }
 
     public DBConnection() {
     }
@@ -38,6 +49,7 @@ public class DBConnection {
                 "url='" + url + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", properties=" + properties +
                 '}';
     }
 }
